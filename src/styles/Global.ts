@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--text-color);
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   :root {
     --bg-color: hsl(240, 78%, 98%);
     --text-color: #333333;

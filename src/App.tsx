@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Modal from 'react-modal';
+
 import Switch from 'react-switch';
 import { linearGradient, shade } from 'polished'
 
@@ -14,12 +16,24 @@ import { Card } from './components/Card';
 import { Details } from './components/Card/Details';
 import { Button } from './components/Button';
 import { Section } from './components/Section';
+import { ReactModal } from './components/ReactModal';
+
+Modal.setAppElement('#root');
 
 export const App = () => {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   const [monthly, setMonthly] = useState(false);
 
   function tooglePricing() {
     setMonthly(monthly === false ? true : false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
   }
 
   return (

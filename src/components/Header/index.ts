@@ -6,6 +6,10 @@ export const Header = styled.header`
 
   margin-bottom: 4rem;
 
+  @media (max-width: 1100px) {
+    margin: 4rem 0;
+  }
+
   h1 {
     text-align: center;
 

@@ -17,6 +17,10 @@ export const Card = styled.div`
   -moz-box-shadow: 1px 1px 2px 0px var(--secondary);
   box-shadow: 1px 1px 2px 0px var(--secondary);
 
+  @media (max-width: 1100px) {
+    margin: 1rem 0;
+  }
+
   > p {
     color: var(--light-grayish-blue);
   }

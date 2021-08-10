@@ -4,7 +4,7 @@ export const Image = styled.img`
   position: absolute;
 
   z-index: 1;
-
+  
   &:first-child {
     top: 0;
     right: 0;
