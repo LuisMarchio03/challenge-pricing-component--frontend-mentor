@@ -27,6 +27,13 @@ export const Button = styled.button`
     background: radial-gradient(circle, rgba(231,92,92,1) 0%, rgba(242,0,0,1) 100%);
   }
 
+  &.user {
+    border: 1px solid var(--white);
+    margin-top: 1rem;
+
+    background: rgb(231,92,92);
+  }
+
   &:hover {
     filter: brightness(85%);
   }
