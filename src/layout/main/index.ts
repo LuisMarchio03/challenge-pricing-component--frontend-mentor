@@ -14,8 +14,4 @@ export const Main = styled.main`
   &.login {
     background: linear-gradient(80deg, var(--primary), var(--secondary));
   }
-
-  &.user {
-    background: linear-gradient(80deg, var(--primary), var(--secondary));
-  }
 `;
