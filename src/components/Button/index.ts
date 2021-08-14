@@ -22,6 +22,11 @@ export const Button = styled.button`
     border-radius: 5px;
   }
 
+  &.login {
+    background: rgb(231,92,92);
+    background: radial-gradient(circle, rgba(231,92,92,1) 0%, rgba(242,0,0,1) 100%);
+  }
+
   &:hover {
     filter: brightness(85%);
   }

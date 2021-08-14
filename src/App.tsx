@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import { useAuth } from './hooks/useAuth';
+import { useHistory } from 'react-router-dom';
+
 import Modal from 'react-modal';
 
 import Switch from 'react-switch';
@@ -16,11 +19,18 @@ import { Card } from './components/Card';
 import { Details } from './components/Card/Details';
 import { Button } from './components/Button';
 import { Section } from './components/Section';
-import { ReactModal } from './components/ReactModal';
+
 
 Modal.setAppElement('#root');
 
 export const App = () => {
+  const { user } = useAuth();
+  const history = useHistory();
+
+  if (!user) {
+    history.push('/login'); 
+  }
+
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [monthly, setMonthly] = useState(false);
 
@@ -81,7 +91,7 @@ export const App = () => {
                 <p>Send up to 3 GB</p>
               </Details>
 
-              <Button>Lear More</Button>
+              <Button>Comprar</Button>
             </Card>
 
             <Card className="active">
@@ -94,7 +104,7 @@ export const App = () => {
                 <p>Send up to 10 GB</p>
               </Details>
 
-              <Button className="active-button">Lear More</Button>
+              <Button className="active-button">Comprar</Button>
             </Card>
 
             <Card>
@@ -107,7 +117,7 @@ export const App = () => {
                 <p>Send up to 20 GB</p>
               </Details>
 
-              <Button>Lear More</Button>
+              <Button>Comprar</Button>
             </Card>
           </Section>
         ) : (
@@ -122,7 +132,7 @@ export const App = () => {
                 <p>Send up to 3 GB</p>
               </Details>
 
-              <Button>Lear More</Button>
+              <Button>Comprar</Button>
             </Card>
 
             <Card className="active">
@@ -135,7 +145,7 @@ export const App = () => {
                 <p>Send up to 10 GB</p>
               </Details>
 
-              <Button className="active-button">Lear More</Button>
+              <Button className="active-button">Comprar</Button>
             </Card>
 
             <Card>
@@ -148,7 +158,7 @@ export const App = () => {
                 <p>Send up to 20 GB</p>
               </Details>
 
-              <Button>Lear More</Button>
+              <Button>Comprar</Button>
             </Card>
           </Section>
         )}

@@ -10,4 +10,8 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  &.login {
+    background: linear-gradient(80deg, var(--primary), var(--secondary));
+  }
 `;
