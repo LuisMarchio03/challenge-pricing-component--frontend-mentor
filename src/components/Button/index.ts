@@ -11,6 +11,9 @@ export const Button = styled.button`
   border: 0;
   border-radius: 5px;
 
+  position: relative;
+  z-index: 999;
+
   cursor: pointer;
 
   transition: filter 0.2s;
